@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const gyphyToken = 'RIDsWMyOtppMLpxLBZ6Xr1TjGoj4Ow5F'
-const token = 'Nzk0MDQxNTE4MDU3OTc5OTE1.X-1Cyg.lYXxTdonHiGzoAQdDx5lFfk7gJI'
+const token = 'Nzk0MDQxNTE4MDU3OTc5OTE1.X-1Cyg.Ge-7uuYOqVEkLQ7ClFn04qBvwPk'
 const client = new Discord.Client()
 let channel = null;
 var GphApiClient = require('giphy-js-sdk-core')
@@ -24,14 +24,14 @@ client.on('message', (msg) => {
     
     if (msg.content.toLowerCase() == 'hello' || msg.content.toLowerCase() == 'hi') {
         msg.reply('hello there!')
-    } else if (msg.content.toLowerCase() == 'viet nam') {
+    } else if (msg.content.toLowerCase() == 'viet nam' || msg.content.toLowerCase()=='việt nam') {
         msg.reply(`Việt Nam, tên chính thức là Cộng hòa Xã hội chủ nghĩa Việt Nam, 
         là quốc gia nằm ở cực phía Đông của bán đảo Đông Dương thuộc khu vực Đông Nam Á, 
         giáp với Lào, Trung Quốc, Campuchia, Biển Đông và vịnh Thái Lan. Quốc gia này có chung đường 
         biên giới trên biển với Thái Lan qua vịnh Thái Lan và với Philippines, Indonesia và Malaysia qua Biển Đông. 
         Thủ đô của Việt Nam là thành phố Hà Nội, còn thành phố đông dân nhất của nó là Thành phố Hồ Chí Minh, 
         còn được gọi với tên cũ là Sài Gòn.`)
-    } else if (msg.content.toLowerCase() == 'bac ho') {
+    } else if (msg.content.toLowerCase() == 'bac ho' || msg.content.toLowerCase()== 'bác hồ') {
         msg.reply(` Tên thường gọi là Hồ Chí Minh (19 tháng 5 năm 1890 – 2 tháng 9 năm 1969), tên khai sinh là Nguyễn Sinh Cung,
         là nhà cách mạng, người sáng lập Đảng Cộng sản Việt Nam, một trong những người đặt nền móng 
         và lãnh đạo công cuộc đấu tranh giành độc lập, toàn vẹn lãnh thổ cho Việt Nam trong thế kỷ XX, 
@@ -43,9 +43,9 @@ client.on('message', (msg) => {
     } else if (contentCommand == 'fb' || contentCommand == 'facebook') {
         msg.reply('https://www.facebook.com/')
     }
-    else if (l > 0 || c > 0) {
+    else if (l >= 0 || c >= 0) {
         msg.reply('Khong duoc noi tuc')
-    } else if (dm > 0 || dm1 > 0 || dm2 > 0) {
+    } else if (dm >= 0 || dm1 >= 0 || dm2 >= 0) {
         msg.reply('Khong duoc noi tuc')
     }
 
